@@ -1,0 +1,14 @@
+<label for="progress" *ngIf="label">{{ label }}</label>
+<progress
+  *ngIf="total > 0; else intermediate"
+  id="progress"
+  [value]="progress > total ? total : progress"
+  [max]="total"
+  [title]="percent | percent"
+  [class]="size"
+>
+  {{ percent | percent }}
+</progress>
+<ng-template #intermediate>
+  <progress [class]="size">Indeterminate</progress>
+</ng-template>

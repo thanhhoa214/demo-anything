@@ -1,0 +1,180 @@
+@import '../typography';
+$bg-dark: #141414;
+$text-light: rgb(219, 219, 219);
+
+@mixin hoverable-icon {
+  .hover-icon {
+    display: none;
+  }
+
+  &:hover {
+    .icon {
+      display: none;
+    }
+    .hover-icon {
+      display: inline-block;
+    }
+  }
+}
+
+@mixin flex-c-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $text-light;
+  background-color: $bg-dark;
+}
+main {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  max-width: 48rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: $bg-dark;
+  height: 100vh;
+
+  .title {
+    font-family: $rajdhani-bold-font;
+    margin-bottom: 0;
+  }
+
+  header {
+    padding: 3rem 0;
+    text-align: center;
+    .subtitle {
+      font-size: 1rem;
+      font-family: $rajdhani-semi-bold-font;
+    }
+  }
+  .projects {
+    width: 100%;
+    flex-grow: 1;
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+
+      .title {
+        line-height: 1rem;
+      }
+    }
+
+    .content {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 1rem;
+
+      &__new,
+      &__item {
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        background: #ffffff10;
+        padding: 1rem;
+        cursor: pointer;
+        aspect-ratio: 1.5/1;
+
+        &:hover {
+          color: white;
+          background: #ffffff20;
+        }
+      }
+
+      &__new {
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        @include hoverable-icon;
+
+        mat-icon {
+          transform: scale(1.5);
+        }
+      }
+
+      &__divider {
+        border-right: 2px dashed $text-light;
+      }
+
+      &__item {
+        @include hoverable-icon;
+      }
+    }
+  }
+  .help {
+    width: 100%;
+    margin-top: 2rem;
+
+    &__divider {
+      width: 100%;
+      height: 1px;
+      background: white;
+      position: relative;
+      font-family: $rajdhani-semi-bold-font;
+
+      span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        background: $bg-dark;
+        padding: 0 0.5rem;
+      }
+    }
+    &__content {
+      padding: 2rem 2rem 5rem;
+      @include flex-c-c;
+      gap: 1rem;
+
+      &-item {
+        @include flex-c-c;
+        width: 33%;
+        font-size: 1rem;
+        gap: 0.5rem;
+        font-family: $rajdhani-semi-bold-font;
+
+        .icon-wrapper {
+          border: 1px solid $text-light;
+          border-radius: 999999px;
+          padding: 0.25rem;
+          width: 3rem;
+          height: 3rem;
+          @include flex-c-c;
+          flex-shrink: 0;
+
+          mat-icon {
+            transform: scale(1.5);
+          }
+        }
+
+        a {
+          color: $text-light;
+          text-decoration: none;
+          mat-icon {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+
+    .logo {
+      @include flex-c-c;
+      gap: 0.25rem;
+
+      img {
+        height: 2rem;
+      }
+    }
+  }
+}

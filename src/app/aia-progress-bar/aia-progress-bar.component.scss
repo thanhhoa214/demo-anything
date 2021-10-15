@@ -1,0 +1,88 @@
+$rounded-map: (
+  sm: 4px,
+  md: 8px,
+  lg: 12px,
+);
+$height-map: (
+  sm: 8px,
+  md: 16px,
+  lg: 24px,
+);
+$color-map: (
+  primary: white,
+  accent: rgb(206, 206, 206),
+);
+
+@mixin color-variant($color: primary) {
+  // border: 1px solid mix(black, map-get($map: $color-map, $key: $color), 20%);
+  &::-webkit-progress-bar {
+    background-color: rgba(map-get($map: $color-map, $key: $color), 40%);
+  }
+  &::-webkit-progress-value {
+    background-color: map-get($map: $color-map, $key: $color);
+  }
+
+  &:not([value])::after {
+    background-color: rgba(map-get($map: $color-map, $key: $color), 40%);
+    background-image: linear-gradient(
+      90deg,
+      transparent 0,
+      map-get($map: $color-map, $key: $color),
+      transparent 50%,
+      map-get($map: $color-map, $key: $color),
+      transparent 75%
+    );
+  }
+}
+
+@mixin size-variant($size) {
+  height: map-get($map: $height-map, $key: $size);
+}
+
+:host {
+  display: block;
+  width: 100%;
+  text-align: right;
+}
+
+progress {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 99999px;
+
+  @include color-variant(primary);
+
+  &.sm {
+    @include size-variant(sm);
+    margin-top: 0.25rem;
+    vertical-align: top;
+  }
+  &.md {
+    @include size-variant(md);
+  }
+  &.lg {
+    @include size-variant(lg);
+  }
+
+  &::-webkit-progress-value {
+    transition: width 1s linear;
+    border-radius: 99999px;
+  }
+
+  /* Indeterminate: */
+  &:not([value])::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: move 1.5s infinite linear backwards;
+  }
+}
+@keyframes move {
+  100% {
+    background-position: 1000px;
+  }
+}

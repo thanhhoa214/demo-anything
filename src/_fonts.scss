@@ -1,0 +1,76 @@
+@font-face {
+  font-family: 'Rajdhani Light';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/assets/fonts/rajdhani-300.eot'); /* IE9 Compat Modes */
+  src: local('Rajdhani Light'), local('Rajdhani-Light'),
+       url('/assets/fonts/rajdhani-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/assets/fonts/rajdhani-300.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/assets/fonts/rajdhani-300.woff') format('woff'), /* Modern Browsers */
+       url('/assets/fonts/rajdhani-300.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/assets/fonts/rajdhani-300.svg#Rajdhani') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Rajdhani Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/rajdhani-regular.eot'); /* IE9 Compat Modes */
+  src: local('Rajdhani Regular'), local('Rajdhani-Regular'),
+       url('/assets/fonts/rajdhani-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/assets/fonts/rajdhani-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/assets/fonts/rajdhani-regular.woff') format('woff'), /* Modern Browsers */
+       url('/assets/fonts/rajdhani-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/assets/fonts/rajdhani-regular.svg#Rajdhani') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Rajdhani Medium';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/assets/fonts/rajdhani-500.eot'); /* IE9 Compat Modes */
+  src: local('Rajdhani Medium'), local('Rajdhani-Medium'),
+       url('/assets/fonts/rajdhani-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/assets/fonts/rajdhani-500.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/assets/fonts/rajdhani-500.woff') format('woff'), /* Modern Browsers */
+       url('/assets/fonts/rajdhani-500.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/assets/fonts/rajdhani-500.svg#Rajdhani') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Rajdhani SemiBold';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/assets/fonts/rajdhani-600.eot'); /* IE9 Compat Modes */
+  src: local('Rajdhani SemiBold'), local('Rajdhani-SemiBold'),
+       url('/assets/fonts/rajdhani-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/assets/fonts/rajdhani-600.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/assets/fonts/rajdhani-600.woff') format('woff'), /* Modern Browsers */
+       url('/assets/fonts/rajdhani-600.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/assets/fonts/rajdhani-600.svg#Rajdhani') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Rajdhani Bold';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/assets/fonts/rajdhani-700.eot'); /* IE9 Compat Modes */
+  src: local('Rajdhani Bold'), local('Rajdhani-Bold'),
+       url('/assets/fonts/rajdhani-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/assets/fonts/rajdhani-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/assets/fonts/rajdhani-700.woff') format('woff'), /* Modern Browsers */
+       url('/assets/fonts/rajdhani-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/assets/fonts/rajdhani-700.svg#Rajdhani') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Arame-Regular';
+  src: url('/assets/fonts/Arame-Regular.otf') format("opentype");
+}
+
+@font-face {
+  font-family: 'Noto Mono';
+  src: url('/assets/fonts/notomono-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
